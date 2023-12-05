@@ -1,3 +1,4 @@
+//functions for map and scatter plot visualization
 const stateColors = {
   "ALABAMA": "#FF5733",
   "ALASKA": "#33FF57",
@@ -327,4 +328,5 @@ drawScatterPlot = (year) => {
       });
 
 }
+
 
