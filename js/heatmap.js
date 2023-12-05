@@ -13,7 +13,7 @@ const svg = d3.select("#correlation")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 //Read the data
-d3.csv("/data/correlation_matrix.js").then(function(data) {
+d3.csv("/data/correlation_matrix.csv").then(function(data) {
 
   // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
   const myGroups = Array.from(new Set(data.map(d => d.group)))
@@ -43,7 +43,7 @@ d3.csv("/data/correlation_matrix.js").then(function(data) {
   // Build color scale
   const myColor = d3.scaleSequential()
     .interpolator(d3.interpolateTurbo)
-    .domain([1,100])
+    .domain([0,1])
 
   // create a tooltip
   const tooltip = d3.select("#correlation")
