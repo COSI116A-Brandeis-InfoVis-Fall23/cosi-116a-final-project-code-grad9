@@ -21,13 +21,18 @@ d3.csv("/data/correlation_matrix.csv").then(function(data) {
 
   // Build X scales and axis:
   const x = d3.scaleBand()
-    .range([ 0, width ])
+    .range([0, width])
     .domain(myGroups)
     .padding(0.05);
+
   svg.append("g")
     .style("font-size", 15)
     .attr("transform", `translate(0, ${height})`)
     .call(d3.axisBottom(x).tickSize(0))
+    .selectAll("text")
+    .attr("transform", "rotate(90)")
+    .attr("dy", "0.35em")
+    .attr("dx", "10em")
     .select(".domain").remove()
 
   // Build Y scales and axis:
