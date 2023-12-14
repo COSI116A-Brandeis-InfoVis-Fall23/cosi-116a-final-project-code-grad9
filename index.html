@@ -2,15 +2,16 @@
 <html lang="en">
 
 <!-- Metadata -->
+
 <head>
   <meta charset="utf-8">
-  
+
   <!-- Title -->
   <title>Project Team #: Topic, COSI 116A F23</title>
-  
+
   <!-- CSS Styling -->
   <link rel="stylesheet" href="style.css">
- 
+
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -23,37 +24,63 @@
 </head>
 
 <!-- Main page content -->
+
 <body>
 
   <!-- Update this with your GitHub repo URL -->
-  <span id="forkongithub"><a href="https://github.com/cosi116a-brandeis-infovis-fall23/cosi116a_project_template">Fork me on GitHub</a></span>
+  <span id="forkongithub"><a href="https://github.com/COSI116A-Brandeis-InfoVis-Fall23/cosi-116a-final-project-code-grad9/tree/main">Fork
+      me on GitHub</a></span>
 
   <!-- Your writeup goes here -->
-  <div class = "content-column">
-  
-    <h1>Project Team #: Topic, COSI 116A F23</h1>
-    
-    <p><strong>Student One</strong>, <strong>Student Two</strong>, <strong>Student Three</strong></p>
-    
-    <p>Project-long Course Project as part of COSI 116A: Information Visualization</a>, taught by <a href="https://cs.brandeis.edu/~dylan/">Prof. Dylan Cashman</a>, <a href="https://cs.brandeis.edu/">Brandeis University</a>.</p>
-    
-    
-    <h1>Motivation</h1>
-    
-    <p><em>Summary of user needs and motivating questions.</em></p>
-    
-    <p><em>Expectation: There is a clear focus, and a developed explanation of the problem, and a reasonable response is proposed.</em></p>
+  <div class="content-column">
 
-    
+    <h1>Project Team 9: Topic, COSI 116A F23</h1>
+
+    <p><strong>Xiaoran Liu</strong>, <strong>Zixin Zhang</strong></p>
+
+    <p>Project-long Course Project as part of COSI 116A: Information Visualization</a>, taught by <a
+        href="https://cs.brandeis.edu/~dylan/">Prof. Dylan Cashman</a>, <a href="https://cs.brandeis.edu/">Brandeis
+        University</a>.</p>
+
+
+    <h1>Motivation</h1>
+
+    <p><em>The project is driven by an interest in exploring the dynamics of educational spending per student and its
+        impact on educational outcomes across different states in the United States. We seek to understand if there's a
+        direct correlation between expenditure and student performance and how this relationship has evolved over time.
+        The aim is to provide insights that could guide policy decisions and resource allocation in education.</em></p>
+
+
+
     <h1>Visualization</h1>
-    
-    <p><em>Include the interactive visualization as part of this page. Static example follows.</em></p>
-    
+
+    <p><em>
+        <ol>
+          <li>
+            <p><em>Color-Coded United States Maps: These maps are used to depict the trends in scores and expenditures
+                over time. Each state is color-coded according to either its average student performance or educational
+                spending, providing a geographical context to the data.</em></p>
+          </li>
+          <li>
+            <p><em>Scatter Plot: This scatter plot is used to show the relationship between educational spending and
+                NAEP test average score for each state. Each state is represented by a circle, with the x-axis representing the average
+                expenditure per student and the y-axis representing the average score. The size of the circle is
+                proportional to the number of students in the state. The scatter plot is interactive, allowing users to
+                hover over each circle to see the state name on the plot.</em></p>
+          </li>
+          <li>
+            <p><em>Heatmap: The heatmap illustrates the correlation between different types of educational expenditures
+                and studentss' average NAEP test score, offering a quick and intuitive way to identify strong or weak
+                correlations.</em></p>
+          </li>
+        </ol>
+      </em></p>
+
   </div>
-  
+
   <!-- Your visualization here -->
   <div class="vis-holder">
-    <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->    
+    <!-- Change viewbox to whatever you want, e.g. "0 0 1000 6000" This determines your aspect ratio and coordinate system -->
     <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
     <h2>Average education expenditure per student in <span id="year1"></span></h2>
     <p>Note: Equivalent price in 2016</p>
@@ -62,84 +89,92 @@
       <g id="boundary"></g>
       <g id="states"></g>
     </svg>
-  
+
     <div class="slider" id="slider1"></div>
 
-  
+
     <h2>Average test scores in each state in <span id="year2"></span></h2>
-  
+
     <svg id="chart2">
       <g id="boundary"></g>
       <g id="states"></g>
     </svg>
-  
+
     <div class="slider" id="slider2"></div>
-    
+
     <h2>Education expenditure and average score by state in <span id="year3"></span></h2>
-  
-  
+
+
     <div id="scatter-plot"></div>
-  
+
     <div class="slider" id="slider3"></div>
 
     <div id="correlation"></div>
   </div>
-  
+
   <!-- Your writeup goes here -->
-  <div class = "content-column">
+  <div class="content-column">
 
     <h1>Demo Video</h1>
-    
-    <p><em>Embedded MP4 demo video using the HTML5 &lt;video&gt; tag. For example, this screen recording Prof. Cody Dunne made of Mike Bostock's flexible transitions in D3 slide:</em></p>
-    
-    <video controls width="100%">
-      <source src="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4" type="video/mp4">
-      <p>Your browser doesn't support HTML5 video. Here is
-       a <a href="http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4">link to the video</a> instead.</p>
-    </video>
+
+    <p><em>Embedded MP4 demo video using the HTML5 &lt;video&gt; tag. For example, this screen recording Prof. Cody
+        Dunne made of Mike Bostock's flexible transitions in D3 slide:</em></p>
+
+        <iframe width="420" height="315"
+        src="https://youtu.be/fSgkQAFK594">
+        </iframe>
 
     <h1>Visualization explanation</h1>
-    
-    <p><em>Final visualization screenshots (PNG images), design justifications, UI walk-through, and linked presentation slides.</em></p>
 
     <h1>Data Analysis</h1>
-    <p><em>Summary of data, data types, and data preprocessing.</em></p>
-
-    <p><em>Expectation: Data sources match the problem statement and are appropriate. These descriptions should be very explicit so someone could read your page and properly reproduce your results.</em></p>
-
+    <p><em>Our data analysis involved two primary datasets: 'states.csv' and '2022.csv'. The 'states_all.csv'
+        dataset encompassed a comprehensive range of variables including yearly educational expenditures, student
+        demographics, and NAEP average score across various states. The '2022.csv' dataset provided a more recent
+        snapshot of educational spending and the NAEP average score.</em></p>
+    <p><em>Both datasets included numerical data (e.g., expenditure amounts, student performance scores) and categorical
+        data (e.g., state names). During preprocessing, we normalized expenditure figures to account for inflation and
+        per-student spending differences, filled missing values using appropriate imputation methods, and converted data
+        types for consistency and ease of analysis.</em></p>
+    <p><em>These datasets were chosen for their relevance to our goal of understanding the relationship between
+        educational spending and student outcomes at the state level. Their comprehensive nature allowed for a
+        multifaceted analysis, ensuring our results would be robust and replicable.</em></p>
     <h1>Task Analysis</h1>
-
-    <p><em>Summary of task table.</em></p>
-
-    <p><em>Expectation: Clearly describes domain tasks, processes, goals and abstract tasks for domain problems.</em></p>
-
+    <p><em>The primary tasks involved in our analysis were identifying trends in educational spending, correlating these
+        trends with student performance metrics, and visualizing geographical variances. The goal was to provide
+        actionable insights into how different spending strategies impact student outcomes and to highlight any regional
+        disparities that might inform policy decisions.</em></p>
+    <p><em>Abstract tasks included data cleansing, normalization, trend analysis, correlation detection, and data
+        visualization. These tasks were crucial in transforming raw data into meaningful insights.</em></p>
     <h1>Design Process</h1>
-    
-    <p><em>Sketches and design choices to justify final visualization.</em></p>
-
-    <p><em>Expectation: Evidence of iterative improvement.
-    Logical discussion of design choices grounded in theory from course.
-    Discusses feedback from usability testing.</em></p>
-
-
+    <p><em>Our design process began with basic sketches of potential visualizations, including scatter plots, heatmaps,
+        and geographical maps. Through iterative refinement, these evolved into more sophisticated visualizations that
+        effectively communicated complex data relationships.</em></p>
+    <p><em>Design decisions were grounded in data visualization theory, focusing on clarity, accuracy, and
+        accessibility. Feedback from initial user testing led to adjustments in color schemes for better visibility and
+        enhancements in the interactivity of the visualizations to improve user engagement and understanding.</em></p>
     <h1>Conclusion</h1>
+    <p><em>The project successfully highlighted key insights into the relationship between educational spending and
+        student performance. It became evident that higher spending does not always correlate with improved outcomes,
+        and regional disparities are significant. The visualizations provided a clear, engaging way to communicate these
+        complex relationships.</em></p>
+    <p><em>For future work, integrating more granular data, such as district-level spending or socio-economic factors,
+        could offer a deeper understanding. Longitudinal studies to track the impact of educational policies over time
+        would also be valuable.</em></p>
+    <p><em>This project demonstrates the power of data analysis and visualization in uncovering and communicating trends
+        in education, offering a foundation for more informed decision-making in this vital domain.</em></p>
 
-    <p><em>Short summary of work completed and areas for improvement/future-work.</em></p>
-    
-    <p><em>Expectation: Meaningfully wraps up project and has good future directions.</em></p>
-
-    
     <h1>Acknowledgments</h1>
 
-    <p><em>List here where any code, packages/libraries, text, images, designs, etc. that you leverage come from.</em></p>
-    
+    <p><em>Special Thanks to D3.js and D3.js Gallery!</em></p>
+
     <ul>
       <li><a href="https://d3js.org/">D3: Data-Driven Documents</a> by Mike Bostock.</li>
-      <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub" ribbon</a> by Chris Heilmann.</li>
+      <li><a href="https://codepo8.github.io/css-fork-on-github-ribbon/#">Pure CSS responsive "Fork me on GitHub"
+          ribbon</a> by Chris Heilmann.</li>
     </ul>
-    
+
   </div>
-  
+
   <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
   <script src="http://d3js.org/d3.v7.min.js" charset="utf-8"></script>
   <script src="http://d3js.org/d3.v6.js" charset="utf-8"></script>
@@ -148,4 +183,5 @@
   <script src="js/visualization.js"></script>
   <script src="js/heatmap.js"></script>
 </body>
+
 </html>

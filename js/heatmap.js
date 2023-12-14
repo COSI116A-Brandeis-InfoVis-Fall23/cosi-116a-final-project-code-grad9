@@ -71,7 +71,7 @@ d3.csv("/data/correlation_matrix.csv").then(function(data) {
   }
   const mousemove = function(event,d) {
     tooltip
-      .html("The exact value of<br>this cell is: " + d.value)
+      .html(d.value)
       .style("left", (event.x)/2 + "px")
       .style("top", (event.y)/2 + "px")
   }
@@ -118,5 +118,5 @@ svg.append("text")
         .style("font-size", "14px")
         .style("fill", "grey")
         .style("max-width", 400)
-        .text("A short description of the take-away message of this chart.");
+        .text("Correlation analysis for the education expeniture genre vesus the average scocre of the student all around the United States.");
 
